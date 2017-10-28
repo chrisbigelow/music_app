@@ -2,12 +2,28 @@
 <html>
   <head>
     <title>MusicApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+  <section class="nav-bar">
+    <nav class="navigation-content">
+      <h1 class="title">Music App</h1>
+      <ul class="links">
+        <% if current_user %>
+          <li> Welcome, <%= current_user.username %> </li>
+          <li><%= button_to "logout", session_url, method: :delete, class: 'logout-button'%></li>
+        <% else %>
+          <li><a href="<%=new_user_url%>">sign up</a></li>
+          <li><a href="<%=new_session_url%>">sign in</a></li>
+        <% end %>
+      </ul>
+    </nav>
+  </section>
 
+  </section>
   <body>
     <%= yield %>
   </body>

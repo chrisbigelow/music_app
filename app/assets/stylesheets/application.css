@@ -13,3 +13,63 @@
  *= require_tree .
  *= require_self
  */
+
+
+ body {
+   margin: 0;
+ }
+
+ .nav-bar {
+   width: 100%
+   display: block;
+   margin: 0;
+   padding: 4px;
+   overflow: hidden;
+   background-color: #e2f442
+ }
+
+ .logout-button {
+   width: 50px;
+   height: 30px;
+   border: 1px solid;
+   font-weight: bold;
+   border-color: black;
+   background-color: #e2f442
+ }
+
+ .logout-button:hover {
+   background-color: black;
+   cursor: pointer;
+   color: white;
+ }
+
+  .navigation-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+  .title {
+   font-family: 'Black Ops One', cursive;
+   font-size: 50px;
+   margin: 0;
+   display: flex;
+
+ }
+
+  a {
+    font-family: 'Black Ops One', cursive;
+    font-size: 20px;
+  }
+
+  .links {
+    list-style: none;
+    display: flex;
+  }
+
+  .links li{
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+  }
